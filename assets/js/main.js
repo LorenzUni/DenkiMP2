@@ -1,3 +1,6 @@
+console.log("main.js version: 2026-01-14");
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const declineButton = document.querySelector(".decline");
   const acceptButton = document.querySelector(".accept");
