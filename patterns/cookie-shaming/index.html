@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Cookie Shaming</title>
-  <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Shaming - Dark Patterns</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
+<body class="pattern-page">
 
-  <a href="../../index.html">← Zurück zur Übersicht</a>
+<nav class="top-nav">
+    <a href="../../index.html" class="back-link">← Zurück zur Übersicht</a>
+</nav>
 
-  <h1>Cookie Shaming</h1>
+<main class="container">
+    <header class="pattern-header">
+        <h1 class="pattern-title">Cookie Shaming</h1>
+    </header>
 
-  <p>
-    Cookie Shaming bezeichnet Interfaces, die Nutzer moralisch unter Druck setzen,
-    um Tracking zu akzeptieren.
-  </p>
+    <section class="pattern-info">
+        <h2>Was ist das?</h2>
+        <p class="definition">
+            Cookie Shaming bezeichnet Interfaces, die Nutzer moralisch unter Druck setzen oder emotional manipulieren,
+            damit diese Tracking-Cookies akzeptieren. Oft werden Antwortmöglichkeiten so formuliert, dass die Ablehnung peinlich wirkt.
+        </p>
 
-  <h2>Beispiel (Simulation)</h2>
+        <div class="danger-box">
+            <strong>Gefahr:</strong>
+            <span class="danger-text">Manipulation durch Schuld- und Schamgefühle sowie Ausnutzung sozialer Normen.</span>
+        </div>
+    </section>
 
-  <div class="fake-popup">
-    <p>Wir und unsere 999 Partner möchten deine Daten nutzen 😊</p>
-    <button class="accept">Alles akzeptieren</button>
-    <button class="decline">Nein, ich will eine schlechtere Erfahrung</button>
-  </div>
+    <section class="pattern-simulation">
+        <h2>Beispiel / Simulation</h2>
 
-  <script src="../../assets/js/main.js"></script>
+        <div class="simulation-window">
+            <div class="fake-cookie-banner">
+                <h3>Wir schätzen deine Privatsphäre (nicht wirklich) 🍪</h3>
+                <p>Wir und unsere 999 Partner möchten deine Daten nutzen, um dir personalisierte Werbung zu zeigen.</p>
+
+                <div class="button-group">
+                    <button class="btn-primary">Alles akzeptieren (Ich bin cool)</button>
+                    <button class="btn-secondary">Ablehnen (Ich hasse gute Angebote und Kätzchen)</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="../../assets/js/main.js"></script>
 </body>
 </html>
