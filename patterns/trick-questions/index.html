@@ -37,11 +37,21 @@
         <p>So sieht das in der Praxis aus:</p>
 
         <div class="simulation-window">
-            <p><em>Hier kommt das Beispiel-Element hin.</em></p>
+          <div class="fake-consent" id="tqApp">
+            <h3>Privacy Settings</h3>
+            <p>Bitte wähle deine Einstellung:</p>
+        
+            <label class="tq-switch-row">
+              <input id="tqSwitch" type="checkbox" />
+              <span class="tq-label">Do not disable tracking</span>
+            </label>
+        
+            <p class="tiny-link" id="tqHint" aria-live="polite"></p>
+          </div>
         </div>
     </section>
 </main>
 
-<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/trick-questions.js"></script>
 </body>
 </html>

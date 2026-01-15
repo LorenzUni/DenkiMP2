@@ -232,3 +232,26 @@ body {
     margin-top: 40px;
     border-top: 1px solid #eee;
 }
+
+
+
+/* Trick Questions: simple switch row */
+.tq-switch-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 15px;
+  user-select: none;
+}
+
+.tq-switch-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.tq-label {
+  font-weight: 700;
+  color: var(--primary-color);
+}
