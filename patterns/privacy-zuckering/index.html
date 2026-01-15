@@ -35,11 +35,89 @@
         <p>So sieht das in der Praxis aus:</p>
 
         <div class="simulation-window">
-            <p><em>Hier kommt das Beispiel-Element hin.</em></p>
+          <div class="fake-cookie-banner" id="pzApp">
+            <h3>Datenschutz & Cookies</h3>
+            <p>
+              Wir nutzen Cookies, um Inhalte zu personalisieren und unsere Dienste zu verbessern.
+              Du kannst deine Einstellungen jederzeit anpassen.
+            </p>
+        
+            <!-- Hauptentscheidung (klassisch zuckerig) -->
+            <div class="button-group" id="pzMainButtons">
+              <button class="btn-huge-green" type="button"
+                onclick="
+                  document.getElementById('pzMsg').style.display='block';
+                  document.getElementById('pzMsg').textContent='Danke! Du hast allen Cookies zugestimmt.';
+                  document.getElementById('pzMainButtons').style.display='none';
+                  document.getElementById('pzSettings').style.display='none';
+                ">
+                COOKIES AKZEPTIEREN
+              </button>
+          
+              <button class="btn-secondary" type="button"
+                onclick="
+                  document.getElementById('pzSettings').style.display='block';
+                  document.getElementById('pzMsg').style.display='none';
+                ">
+                Optionen verwalten
+              </button>
+            </div>
+        
+            <!-- Versteckte/komplexe Settings -->
+            <div id="pzSettings" style="display:none; margin-top:18px; text-align:left; max-width:420px; margin-left:auto; margin-right:auto;">
+              <p style="font-weight:700; margin-bottom:10px;">Erweiterte Einstellungen</p>
+              <p class="tiny-link" style="margin-top:-6px;">
+                Hinweis: Jede Option ist als Opt-out formuliert (kognitiv anstrengender).
+              </p>
+          
+              <label style="display:flex; gap:10px; align-items:flex-start; margin:10px 0;">
+                <input type="checkbox" checked>
+                <span><strong>Do not disable personalized ads</strong><br><span class="tiny-link">Personalisierte Werbung bleibt aktiv, wenn du es nicht deaktivierst.</span></span>
+              </label>
+          
+              <label style="display:flex; gap:10px; align-items:flex-start; margin:10px 0;">
+                <input type="checkbox" checked>
+                <span><strong>Do not opt out of location tracking</strong><br><span class="tiny-link">Standort-Tracking bleibt aktiv, wenn du nicht „opt-out“ wählst.</span></span>
+              </label>
+          
+              <label style="display:flex; gap:10px; align-items:flex-start; margin:10px 0;">
+                <input type="checkbox" checked>
+                <span><strong>Do not disable data sharing with partners</strong><br><span class="tiny-link">Datenweitergabe an Partner bleibt aktiv, wenn du es nicht deaktivierst.</span></span>
+              </label>
+          
+              <label style="display:flex; gap:10px; align-items:flex-start; margin:10px 0;">
+                <input type="checkbox" checked>
+                <span><strong>Do not opt out of analytics</strong><br><span class="tiny-link">Analyse/Tracking bleibt aktiv, wenn du nicht widersprichst.</span></span>
+              </label>
+          
+              <div class="button-group" style="margin-top:14px;">
+                <button class="btn-primary" type="button"
+                  onclick="
+                    document.getElementById('pzMsg').style.display='block';
+                    document.getElementById('pzMsg').textContent='Einstellungen gespeichert.';
+                    document.getElementById('pzSettings').style.display='none';
+                    document.getElementById('pzMainButtons').style.display='none';
+                  ">
+                  Einstellungen speichern
+                </button>
+            
+                <a href='javascript:void(0)' class="tiny-link"
+                  onclick="
+                    document.getElementById('pzSettings').style.display='none';
+                  ">
+                  Abbrechen
+                </a>
+              </div>
+            </div>
+        
+            <p id="pzMsg" class="tiny-link" style="display:none; margin-top:15px;" aria-live="polite"></p>
+        
+            <br>
+          </div>
         </div>
+
     </section>
 </main>
 
-<script src="../../assets/js/main.js"></script>
 </body>
 </html>

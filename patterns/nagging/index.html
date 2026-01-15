@@ -35,11 +35,28 @@
         <p>So sieht das in der Praxis aus:</p>
 
         <div class="simulation-window">
-            <p><em>Hier kommt das Beispiel-Element hin.</em></p>
-        </div>
+              <div class="fake-cookie-banner" id="ngBanner">
+                <h3>Tracking erlauben?</h3>
+                <p>Wir benötigen deine Zustimmung für ein „besseres Erlebnis“.</p>
+            
+                <div class="button-group">
+                  <button class="btn-huge-green" id="ngAccept" type="button">
+                    TRACKING ERLAUBEN
+                  </button>
+              
+                  <button class="btn-secondary" id="ngDecline" type="button">
+                    Ablehnen
+                  </button>
+                </div>
+              </div>
+          
+              <!-- Anzeige-Box für Feedback -->
+              <div id="ngMessageBox" style="display:none; margin-top:20px; padding:15px; border-radius:6px; font-weight:600;">
+                <span id="ngMessageText"></span>
+              </div>
     </section>
 </main>
 
-<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/nagging.js"></script>
 </body>
 </html>
