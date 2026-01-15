@@ -36,11 +36,32 @@
         <p>So sieht das in der Praxis aus:</p>
 
         <div class="simulation-window">
-            <p><em>Hier kommt das Beispiel-Element hin.</em></p>
+          <div class="fake-cookie-banner" id="mdApp">
+            <h3>We value your privacy</h3>
+            <p>
+              We use cookies to improve your experience and to personalize content.
+            </p>
+        
+            <div class="button-group">
+              <button class="btn-huge-green" id="mdAccept" type="button">
+                ACCEPT ALL
+              </button>
+          
+              <!-- Absichtlich unattraktiv -->
+              <a href="#" id="mdDecline" class="tiny-link">
+                Decline optional cookies
+              </a>
+            </div>
+        
+            <p class="tiny-link" id="mdHint" aria-live="polite"></p>
+          </div>
         </div>
+
+        
+
     </section>
 </main>
 
-<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/misdirection.js"></script>
 </body>
 </html>
