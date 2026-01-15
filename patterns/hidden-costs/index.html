@@ -35,11 +35,88 @@
         <p>So sieht das in der Praxis aus:</p>
 
         <div class="simulation-window">
-            <p><em>Hier kommt das Beispiel-Element hin.</em></p>
-        </div>
-    </section>
-</main>
+            <div class="fake-checkout" id="hcApp">
+              <h3>Shop</h3>
+            
+              <!-- STEP 1: Produkt -->
+              <div class="hc-step" data-step="product">
+                <p><strong>Produkt:</strong> Socken (1 Paar)</p>
+                <p><strong>Preis:</strong> <span>€ 4,99</span></p>
 
-<script src="../../assets/js/main.js"></script>
+                <button class="btn-primary" id="hcAddToCart" type="button">
+                  In den Warenkorb
+                </button>
+            
+                <p class="tiny-link">Preis gilt „ohne weitere Angaben“.</p>
+              </div>
+          
+              <!-- STEP 2: Adresse -->
+              <div class="hc-step" data-step="address" hidden>
+                <p><strong>Adresse eingeben</strong></p>
+
+                <div style="text-align:left; max-width: 360px; margin: 0 auto;">
+                  <label for="hcAddress" style="display:block; font-weight:600; margin-bottom:6px;">
+                    Lieferadresse
+                  </label>
+                  <input
+                    id="hcAddress"
+                    type="text"
+                    placeholder="Straße, Hausnr., PLZ, Ort"
+                    style="width:100%; padding:10px; border:1px solid #ddd; border-radius:6px;"
+                  />
+                  <p class="tiny-link" id="hcAddressHint" aria-live="polite" style="margin-top:8px;"></p>
+                </div>
+            
+                <div class="button-group" style="margin-top: 15px;">
+                  <button class="btn-primary" id="hcToCheckout" type="button">
+                    Weiter zum Checkout
+                  </button>
+                  <button class="btn-secondary" id="hcBackToProduct" type="button">
+                    ← Zurück
+                  </button>
+                </div>
+              </div>
+          
+              <!-- STEP 3: Checkout (jetzt werden Lieferkosten sichtbar) -->
+              <div class="hc-step" data-step="checkout" hidden>
+                <p><strong>Checkout</strong></p>
+
+                <div style="text-align:left; max-width: 360px; margin: 0 auto;">
+                  <p>Socken (1 Paar): <span>€ 4,99</span></p>
+                  <p>Lieferkosten: <span>€ 5,00</span></p>
+                  <hr />
+                  <p><strong>Gesamt:</strong> <span id="hcTotal">€ 9,99</span></p>
+                </div>
+            
+                <div class="button-group" style="margin-top: 15px;">
+                  <button class="btn-primary" id="hcPlaceOrder" type="button">
+                    Jetzt kostenpflichtig bestellen
+                  </button>
+                  <button class="btn-secondary" id="hcBackToAddress" type="button">
+                    ← Zurück
+                  </button>
+                </div>
+            
+                <p class="tiny-link" id="hcHint" aria-live="polite"></p>
+              </div>
+          
+              <!-- STEP 4: Done -->
+              <div class="hc-step" data-step="done" hidden>
+                <p><strong>Bestellung abgeschlossen</strong></p>
+                <p class="danger-text" style="margin-top: 10px;">
+                  Hidden Costs: Lieferkosten wurden erst nach Eingabe der Adresse im Checkout sichtbar.
+                </p>
+            
+                <button class="btn-secondary" id="hcReset" type="button">
+                  Simulation zurücksetzen
+                </button>
+            </div>
+     </div>
+</div>
+
+<script src="hidden-costs.js"></script>
+
+
+<script src="../../assets/js/hidden-costs.js"></script>
 </body>
 </html>
