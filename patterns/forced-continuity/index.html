@@ -35,11 +35,33 @@
         <p>So sieht das in der Praxis aus:</p>
 
         <div class="simulation-window">
-            <p><em>Hier kommt das Beispiel-Element hin.</em></p>
+            <div class="fake-download-area">
+                <h3>Premium Probeabo</h3>
+                <p>Starte eine kostenlose Testphase. Kündigung ist leider nicht direkt möglich.</p>
+            
+                <button id="fcStartBtn" class="btn-huge-green" type="button">
+                    KOSTENLOSE TESTPHASE STARTEN
+                </button>
+            
+                <div id="fcTimerBox" style="display:none; margin-top:18px;">
+                    <p style="font-weight:700; color:#c0392b; margin:0;">
+                        Testphase endet in <span id="fcTimer">5</span> Sekunden
+                    </p>
+                
+                    <p id="fcStatus" class="tiny-link" style="margin-top:10px;">
+                        Um zu kündigen: E-Mail an <strong>business@forcedContinuity.at</strong><br>
+                        (Bearbeitungsdauer: 1–2 Werktage)
+                    </p>
+                </div>
+            
+                <br>
+                <a href="../../index.html" class="tiny-link">weiter zur Seite</a>
+            </div>
         </div>
+
     </section>
 </main>
 
-<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/forced-continuity.js"></script>
 </body>
 </html>
