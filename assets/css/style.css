@@ -255,3 +255,9 @@ body {
   font-weight: 700;
   color: var(--primary-color);
 }
+
+#tqHint {
+    font-size: 14px;   /* Standard war ~11px */
+    margin-top: 12px;
+}
+
