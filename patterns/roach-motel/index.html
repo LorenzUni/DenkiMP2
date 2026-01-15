@@ -35,8 +35,28 @@
         <p>So sieht das in der Praxis aus:</p>
 
         <div class="simulation-window">
-            <p><em>Hier kommt das Beispiel-Element hin.</em></p>
+            <div class="fake-download-area">
+                <h3>📰 Tageszeitung</h3>
+                <p>Erhalten Sie täglich die neuesten Nachrichten.</p>
+            
+                <button id="subscribeBtn" class="btn-huge-green"
+                    onclick="
+                      this.remove();
+                      document.getElementById('roachText').style.display = 'block';
+                    ">
+                    ZEITUNG ABONNIEREN
+                </button>
+            
+                <p id="roachText" style="display:none; margin-top:20px; font-weight:600; color:#c0392b;">
+                    Um zu kündigen, lösen Sie bitte <strong>NP = P</strong> und schicken Sie die Lösung an:<br>
+                    <strong>business@roachModel.at</strong>
+                </p>
+            
+                <br>
+                <a href="../../index.html" class="tiny-link">Zurück zur Seite</a>
+            </div>
         </div>
+
     </section>
 </main>
 
