@@ -12,9 +12,7 @@
 
     // Inhalt der harmlosen Datei
     const content =
-      "virus.txt (harmless demo)\n" +
-      "This file is intentionally harmless.\n" +
-      "It exists to demonstrate a 'bait-and-switch' UI pattern.\n";
+      "das könnte ein gefährlicher Virus sein! Ist aber diesmal komplett harmlos\n";
 
     // Datei im Browser erzeugen
     const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
