@@ -271,3 +271,35 @@ body {
 #ngAccept {
   animation: nagging-blink 0.8s infinite;
 }
+
+/*Separator*/
+.pattern-separator {
+    list-style: none;
+    margin: 28px 0 12px 0;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.pattern-separator::before,
+.pattern-separator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background: #ddd;
+}
+
+.pattern-separator::before {
+    left: 0;
+}
+
+.pattern-separator::after {
+    right: 0;
+}
