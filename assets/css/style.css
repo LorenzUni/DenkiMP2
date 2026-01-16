@@ -303,3 +303,9 @@ body {
 .pattern-separator::after {
     right: 0;
 }
+
+/* Separator: normaler Hover, aber ohne blauen Rand links */
+.pattern-list li.pattern-separator:hover {
+    border-left: 1px solid #ddd !important;
+}
+
